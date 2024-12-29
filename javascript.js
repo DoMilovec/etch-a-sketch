@@ -1,5 +1,23 @@
 let n = 16;
 const container = document.querySelector('.container');
+const erase = document.querySelector('.erase');
+const clearBoard = document.querySelector('.clearBoard');
+
+// SETTING GRID BUTTON
+let gridBtn = document.querySelector('.gridSize');
+
+gridBtn.addEventListener('click', (e) => {
+    
+    // LOOP TO CALL FOR PROMPT CALL IF INVALID INPUT
+    while(true){
+    n = prompt('Enter grid size (write one number, that is N which will create grid of N*N. It has to be lower than 100!):');
+    container.innerHTML = ' '; 
+    if (isNaN(n) || n >100) {
+        alert(`Please enter a valid number that is < 100.`);
+    } else {
+        break;
+    }}
+
 let width = 512/n;
 let height = 512/n;
 
@@ -24,13 +42,16 @@ yellow.addEventListener('click', () => {
 green.addEventListener('click', () => {
     color = 'green';
 })
+erase.addEventListener('click', () => {
+    color = 'white';
+})
 
 // CREATING A GRID OF n * n
 for (let i = 0 ; i < n * n ; i++) {
     const box = document.createElement('div');
     box.classList.add('box');
     container.appendChild(box);
-    box.style.border = '1px black solid';
+    box.style.border = '0.5px black solid';
     box.style.width = `${width}px`;
     box.style.height = `${height}px`;
 
@@ -56,4 +77,10 @@ for (let i = 0 ; i < n * n ; i++) {
         
     })
 
+// ERASE AND CLEAR BOARD BUTTON EVENTS
+clearBoard.addEventListener('click', (e) => {
+    box.style.backgroundColor = 'white';
+})
 }
+})
+

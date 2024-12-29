@@ -5,83 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Etch-a-Sketch</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        .container {
-            display: flex;
-            width: 512px;
-            height: 512px;
-            flex-wrap: wrap;
-        }
-
-        #colors {
-            display: flex;
-            margin: 10px 0px 10px;
-        }
-
-        #colors button {
-            border: 2px black;
-            height: 64px;
-            width: 128px;
-            font-family: inherit;
-            padding: 0.6em 1.3em;
-            font-weight: 900;
-            font-size: 18px;
-            border: 3px solid black;
-            border-radius: 0.4em;
-            box-shadow: 0.1em 0.1em;
-            cursor: pointer;
-        }
-
-        .red {
-            background-color: red;
-        }
-        .blue {
-            background-color: blue;
-        }
-        .yellow {
-            background-color: yellow;
-        }
-        .green {
-            background-color: green;
-        }
-
-        button {
-
-            }
-
-        button:hover {
-            transform: translate(-0.05em, -0.05em);
-            box-shadow: 0.15em 0.15em;
-        }
-
-        button:active {
-            transform: translate(0.05em, 0.05em);
-            box-shadow: 0.05em 0.05em;
-        }
-
-        #welcome {
-            font-family: 'Courier New', Courier, monospacei;
-            font-size: 14.8px;
-        }
-
-        .gridSize {
-            width: 512px;
-            height: 64px;
-            font-size: 24px;
-            font-family: 'Courier New', Courier, monospace;
-            background-color: coral;
-            color: white;
-            font-style: oblique;
-            margin-top: 2px;
-        }
-    </style>
 </head>
 <body>
-    <div id="welcome">Welcome to <strong>Etch-a-Sketch! </strong>Select a color to start drawing:</div>
+    <div id="welcome">Welcome to <strong>Etch-a-Sketch! <br></strong>Set a grid size and select a color to start drawing <br>(You can change grid size at any point):</div>
     <div id="colors">
         <button class="red">Red</button>
         <button class="blue">Blue</button>
@@ -89,7 +15,11 @@
         <button class="green">Green</button>
     </div>
     <div class="container"></div>
-    <button class="gridSize">SET DIFFERENT GRID SIZE</button>
+    <button class="gridSize">SET GRID SIZE</button>
+    <div id="bottomBtns">
+        <button class="erase">ERASER</button>
+        <button class="clearBoard">CLEAR BOARD</button>
+    </div>
 
     <script src="javascript.js"></script>
 </body>
