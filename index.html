@@ -10,10 +10,6 @@
             box-sizing: border-box;
         }
 
-        .box:hover {
-            background-color: black;
-        }
-
         .container {
             display: flex;
             width: 512px;
@@ -21,17 +17,68 @@
             flex-wrap: wrap;
         }
 
-        .colored {
-            background-color: black;
+        #colors {
+            display: flex;
+            margin: 10px 0px 10px;
         }
 
+        #colors button {
+            border: 2px black;
+            height: 64px;
+            width: 128px;
+            font-family: inherit;
+            padding: 0.6em 1.3em;
+            font-weight: 900;
+            font-size: 18px;
+            border: 3px solid black;
+            border-radius: 0.4em;
+            box-shadow: 0.1em 0.1em;
+            cursor: pointer;
+        }
+
+        .red {
+            background-color: red;
+        }
+        .blue {
+            background-color: blue;
+        }
+        .yellow {
+            background-color: yellow;
+        }
+        .green {
+            background-color: green;
+        }
+
+        button {
+
+            }
+
+        button:hover {
+            transform: translate(-0.05em, -0.05em);
+            box-shadow: 0.15em 0.15em;
+        }
+
+        button:active {
+            transform: translate(0.05em, 0.05em);
+            box-shadow: 0.05em 0.05em;
+        }
+
+        #welcome {
+            font-family: 'Courier New', Courier, monospacei;
+            font-size: 14.8px;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-
+    <div id="welcome">Welcome to <strong>Etch-a-Sketch! </strong>Select a color to start drawing:</div>
+    <div id="colors">
+        <button class="red">Red</button>
+        <button class="blue">Blue</button>
+        <button class="yellow">Yellow</button>
+        <button class="green">Green</button>
     </div>
-
+    <div class="container"></div>
+    <button class="gridSize">SET DIFFERENT GRID SIZE</button>
 
     <script src="javascript.js"></script>
 </body>
